@@ -1,0 +1,1 @@
+{"processes":{"0ca3f500-f46d-4dae-a256-5301e3bc85d0":{"parent":null,"children":["39256030-4ca6-40e5-8f2b-ee0c4e2fbb88"]},"39256030-4ca6-40e5-8f2b-ee0c4e2fbb88":{"parent":"0ca3f500-f46d-4dae-a256-5301e3bc85d0","children":[]}},"files":{"/home/usuario/modi/src/modificacion.ts":["39256030-4ca6-40e5-8f2b-ee0c4e2fbb88"]},"externalIds":{}}

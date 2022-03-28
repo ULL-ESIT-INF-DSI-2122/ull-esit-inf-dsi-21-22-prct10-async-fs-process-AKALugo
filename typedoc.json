@@ -1,0 +1,6 @@
+{
+    "entryPoints": [
+        "./src/X/X.ts"
+    ],
+    "out": "./typedoc"
+}
