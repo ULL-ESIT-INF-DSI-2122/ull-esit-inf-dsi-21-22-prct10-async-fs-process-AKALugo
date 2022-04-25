@@ -1,0 +1,4 @@
+mplemente un programa que devuelva el número de ocurrencias de una palabra en un fichero de texto.
+Para acceder al contenido del fichero cateto deberá expandir el comando cat de Unix/Linux
+además de expandir el comando grep con la salida proporcionada por cat como entrada para obtener las
+líneas en las que se encuentra la palabra buscada.
