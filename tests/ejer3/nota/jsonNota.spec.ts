@@ -1,7 +1,7 @@
 import 'mocha';
 import {expect} from "chai";
-import {JSONNota} from "../../src/ejer3/notas/jsonNota";
-import {Nota} from "../../src/ejer3/notas/nota";
+import {JSONNota} from "../../../src/ejer3/notas/jsonNota";
+import {Nota} from "../../../src/ejer3/notas/nota";
 
 const impNota = new JSONNota(new Nota("Invitados", "ale, sergio, juan", "red"));
 describe("Pruebas de la clase JSONNota", () => {

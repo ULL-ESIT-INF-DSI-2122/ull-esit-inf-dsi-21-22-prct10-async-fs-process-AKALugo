@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from "chai";
-import {GestionNota} from "../../src/ejer3/notas/gestionNota";
+import {GestionNota} from "../../../src/ejer3/notas/gestionNota";
 
 
 const gestion = new GestionNota();

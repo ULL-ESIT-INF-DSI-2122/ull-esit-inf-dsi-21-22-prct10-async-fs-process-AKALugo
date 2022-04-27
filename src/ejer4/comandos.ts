@@ -4,6 +4,9 @@ const chalk = require("chalk");
 
 const gestion = new Logica();
 
+/**
+ * COmando que permite hacer un ls -ld
+ */
 yargs.command({
   command: 'directorio-fichero',
   describe: 'Mira si una ruta concreta es un archivo o un directorio',
@@ -23,7 +26,9 @@ yargs.command({
   },
 });
 
-
+/**
+ * COmando que permite ejecutar un mkdir
+ */
 yargs.command({
   command: 'nuevo-directorio',
   describe: 'Crea un nuevo direcotrio',
@@ -43,7 +48,9 @@ yargs.command({
   },
 });
 
-
+/**
+ * Comando que permite ejecutar un ls
+ */
 yargs.command({
   command: 'listar-ficheros',
   describe: 'Lista una serie de ficheros',
@@ -63,6 +70,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que permite ejecutar un cat de un fichero.
+ */
 yargs.command({
   command: 'info-fichero',
   describe: 'Muestra la información de un fichero',
@@ -82,7 +92,9 @@ yargs.command({
   },
 });
 
-
+/**
+ * Comando que permite ejecutar un rm -rf
+ */
 yargs.command({
   command: 'borrar-elemento',
   describe: 'Borra un fichero o un directorio',
@@ -102,6 +114,9 @@ yargs.command({
   },
 });
 
+/**
+ * Comando que permite ejecutar un mv
+ */
 yargs.command({
   command: 'copiar-ruta',
   describe: 'Copia el contenido de una ruta a otra',

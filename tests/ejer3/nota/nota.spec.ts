@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from "chai";
-import {Nota} from "../../src/ejer3/notas/nota";
+import {Nota} from "../../../src/ejer3/notas/nota";
 
 const nota= new Nota("Invitados", "ale, sergio, juan", "red");
 describe("Pruebas clase Nota", () => {
