@@ -26,22 +26,18 @@ export class CatGrep extends EventEmitter {
       if (this.argumentos !== 5) {
         console.log("Error en los argumentos, debe pasar 5 argumentos");
         this.emit('error', "Error en los argumentos, debe pasar 5 argumentos");
-      }
-      
-      if (this.metodo != "pipe" && this.metodo != "notPipe") {
+      } else if (this.metodo != "pipe" && this.metodo != "notPipe") {
         console.log("Seleccione una opción válida: pipe/notPipe");
         this.emit('error', "Seleccione una opción válida: pipe/notPipe");
-      }
-
-      if (err) {
+      } else if (err) {
         console.log("No se puede acceder al fichero");
         this.emit('error', "No se puede acceder al fichero");
-      }
-
-      if (this.metodo == "pipe") {
-        this.pipe();
       } else {
-        this.notPipe();
+        if (this.metodo == "pipe") {
+          this.pipe();
+        } else {
+          this.notPipe();
+        }
       }
     });
   }

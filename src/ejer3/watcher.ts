@@ -19,22 +19,18 @@ export class Watcher {
   watch() {
     if (this.argumentos !== 4) {
       console.log("Error en los argumentos, debe pasar 4 argumentos");
-      process.exit(1);
-    }
-
+    } else {
     // Miramos que podamos leer del fichero.
-    fs.access(this.ruta, fs.constants.F_OK, (error) => {
-      if (error) {
-        console.log("No se puede acceder al fichero");
-        process.exit(1);
-      }
-      // Si no hay errores, creamos el watcher.
-      fs.watch(this.ruta, (evento, archivo) => {
-        console.log(`${this.usuario} ha ${evento} el fichero ${archivo}`);
+      fs.access(this.ruta, fs.constants.F_OK, (error) => {
+        if (error) {
+          console.log("No se puede acceder al fichero");
+        } else {
+        // Si no hay errores, creamos el watcher.
+          fs.watch(this.ruta, (evento, archivo) => {
+            console.log(`${this.usuario} ha ${evento} el fichero ${archivo}`);
+          });
+        }
       });
-    });
+    }
   }
 }
-
-const aux = new Watcher(process.argv[2], process.argv[3], process.argv.length);
-aux.watch();
