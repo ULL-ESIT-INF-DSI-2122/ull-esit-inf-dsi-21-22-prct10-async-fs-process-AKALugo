@@ -22,21 +22,22 @@ export class CatGrep extends EventEmitter {
    * Método que ejecuta el cat y el grep.
    */
   ejecucion(): void {
-    if (this.argumentos !== 5) {
-      console.log("Error en los argumentos, debe pasar 5 argumentos");
-      process.exit(1);
-    }
-    
-    if (this.metodo != "pipe" && this.metodo != "notPipe") {
-      console.log("Seleccione una opción válida: pipe/notPipe");
-      process.exit(1);
-    }
-
     fs.access(this.fichero, fs.constants.R_OK, (err) => {
+      if (this.argumentos !== 5) {
+        console.log("Error en los argumentos, debe pasar 5 argumentos");
+        this.emit('error', "Error en los argumentos, debe pasar 5 argumentos");
+      }
+      
+      if (this.metodo != "pipe" && this.metodo != "notPipe") {
+        console.log("Seleccione una opción válida: pipe/notPipe");
+        this.emit('error', "Seleccione una opción válida: pipe/notPipe");
+      }
+
       if (err) {
         console.log("No se puede acceder al fichero");
-        process.exit(1);
+        this.emit('error', "No se puede acceder al fichero");
       }
+
       if (this.metodo == "pipe") {
         this.pipe();
       } else {
