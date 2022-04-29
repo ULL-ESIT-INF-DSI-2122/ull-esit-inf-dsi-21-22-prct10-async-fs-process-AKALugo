@@ -105,6 +105,3 @@ export class CatGrep extends EventEmitter {
     });
   }
 }
-
-const aux = new CatGrep(process.argv[2], process.argv[3], process.argv[4], process.argv.length);
-aux.ejecucion();
