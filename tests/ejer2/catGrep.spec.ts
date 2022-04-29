@@ -2,8 +2,8 @@ import 'mocha';
 import {expect} from 'chai';
 import {CatGrep} from '../../src/ejer2/catGrep';
 
-const auxPipe = new CatGrep("prueba.txt", "@types", "pipe", 5);
-const auxNotPipe = new CatGrep("prueba.txt", "@types", "notPipe", 5);
+const auxPipe = new CatGrep("tests/ejer2/prueba.txt", "@types", "pipe", 5);
+const auxNotPipe = new CatGrep("tests/ejer2/prueba.txt", "@types", "notPipe", 5);
 
 describe('CatGrep', () => {
   it('Debería emitir un resultado final, con el metodo pipe', (done) => {

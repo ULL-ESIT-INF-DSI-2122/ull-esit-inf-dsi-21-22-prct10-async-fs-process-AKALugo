@@ -3,5 +3,4 @@ dist
 .nyc_output
 coverage
 .vscode
-prueba.txt
 database
