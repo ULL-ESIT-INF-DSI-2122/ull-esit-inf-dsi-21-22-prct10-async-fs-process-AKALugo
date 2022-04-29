@@ -1,6 +1,13 @@
 {
     "entryPoints": [
-        "./src/X/X.ts"
+        "./src/ejer2/catGrep.ts",
+        "./src/ejer3/watcher.ts",
+        "./src/ejer3/notas/comandos.ts",
+        "./src/ejer3/notas/gestionNota.ts",
+        "./src/ejer3/notas/jsonNota.ts",
+        "./src/ejer3/notas/nota.ts",
+        "./src/ejer4/comandos.ts",
+        "./src/ejer4/logica.ts"
     ],
     "out": "./typedoc"
 }

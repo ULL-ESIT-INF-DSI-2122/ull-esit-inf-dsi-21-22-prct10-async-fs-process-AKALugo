@@ -23,15 +23,15 @@ export class Watcher {
     }
 
     // Miramos que podamos leer del fichero.
-    try {
-      fs.accessSync(this.ruta, fs.constants.F_OK);
-    } catch (err) {
-      console.log("Ha ocurrido algñun problema con la ruta");
-      process.exit(1);
-    }
-
-    fs.watch(this.ruta, (evento, archivo) => {
-      console.log(`${this.usuario} ha ${evento} el fichero ${archivo}`);
+    fs.access(this.ruta, fs.constants.F_OK, (error) => {
+      if (error) {
+        console.log("No se puede acceder al fichero");
+        process.exit(1);
+      }
+      // Si no hay errores, creamos el watcher.
+      fs.watch(this.ruta, (evento, archivo) => {
+        console.log(`${this.usuario} ha ${evento} el fichero ${archivo}`);
+      });
     });
   }
 }

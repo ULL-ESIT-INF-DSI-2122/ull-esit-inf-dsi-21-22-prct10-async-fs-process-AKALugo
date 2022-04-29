@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const gestion = new Logica();
 
 /**
- * COmando que permite hacer un ls -ld
+ * Comando que permite hacer un ls -ld
  */
 yargs.command({
   command: 'directorio-fichero',

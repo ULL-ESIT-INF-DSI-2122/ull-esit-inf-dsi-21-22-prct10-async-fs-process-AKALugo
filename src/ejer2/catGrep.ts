@@ -32,18 +32,17 @@ export class CatGrep extends EventEmitter {
       process.exit(1);
     }
 
-    try {
-      fs.accessSync(this.fichero, fs.constants.R_OK);
-    } catch (err) {
-      console.log("No se puede acceder al fichero");
-      process.exit(1);
-    }
-
-    if (this.metodo == "pipe") {
-      this.pipe();
-    } else {
-      this.notPipe();
-    }
+    fs.access(this.fichero, fs.constants.R_OK, (err) => {
+      if (err) {
+        console.log("No se puede acceder al fichero");
+        process.exit(1);
+      }
+      if (this.metodo == "pipe") {
+        this.pipe();
+      } else {
+        this.notPipe();
+      }
+    });
   }
 
   /**
@@ -106,3 +105,6 @@ export class CatGrep extends EventEmitter {
     });
   }
 }
+
+const aux = new CatGrep(process.argv[2], process.argv[3], process.argv[4], process.argv.length);
+aux.ejecucion();
