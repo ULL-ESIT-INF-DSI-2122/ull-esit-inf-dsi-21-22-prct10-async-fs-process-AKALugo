@@ -17,3 +17,7 @@
         <img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2122_ull-esit-inf-dsi-21-22-prct10-async-fs-process-AKALugo&metric=alert_status">
     </a>
 </p>
+
+* Realizada por Alejandro Lugo Fumero.
+* 4 ejecicio de TypeScript utilizando node y diversas herramientas.
+* Pinche [aquí](https://ull-esit-inf-dsi-2122.github.io/ull-esit-inf-dsi-21-22-prct10-async-fs-process-AKALugo/) para acceder a la GitHub page.
